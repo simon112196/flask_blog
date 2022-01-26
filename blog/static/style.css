@@ -144,4 +144,6 @@ input.post_rating:checked ~ label.post_rating::after{
     opacity: 1;
 }
 
-
+.first_name{
+    display: block;
+}
