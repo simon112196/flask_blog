@@ -16,20 +16,17 @@ body{
     color:black;
     padding:10px;
 }
-a{
+#top_navig_bar a{
     text-decoration: none;
+    display: block;
+    color:black;
+    padding:10px;
 }
 a.header{
-    display: block;
     float: left;
-    color:black;
-    padding:10px;
 }
 a.header-right{
-    display: block;
     float: right;
-    color:black;
-    padding:10px;
 }
 a.header:hover{
     background-color: black;
