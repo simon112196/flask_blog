@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+{% for post in posts %}
+    <p><a href="{{ url_for('post', post_id=post.id)}}">"{{ post.title }}" &nbsp></a>by {{ post.user.username }}</p>
+    <p>{{ post.content }}</p>
+{% endfor %}
+{% endblock content %}

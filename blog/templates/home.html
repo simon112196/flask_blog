@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<form method="POST" aciton="">
+    {{form_sort.csrf_token}}
+    {{form_sort.order.label}}:
+    {{form_sort.order(id_='sorting', onchange_="this.form.submit()")}}
+</form>
+    <div>
+    {% for post in posts %}
+    <div class="post">    
+        <h1 class=post_title><a href="{{ url_for('post', post_id=post.id)}}">{{ post.title }} &nbsp</a></h1>
+        <span>by {{ post.user.first_name }}</span>
+    <p class=short_description>{{ post.short_descris }}</p>
+    </div>
+    {% endfor %}
+    </div>
+    <!--<form method="POST" action="">
+        {{form.csrf_token}}
+        <p class="title">{{form.title.label}}{{form.title}}</p>
+        <p class="content_box">{{form.content.label}}{{form.content}}</p>
+        <input type="submit" value="Enter">
+    </form>-->
+    
+    <script>
+        document.getElementsById(sorting).addEventListener("onchange", function(){
+           this.form_sort.submit()
+    
+           return reload()
+        })
+
+    </script>
+
+
+{% endblock content %}

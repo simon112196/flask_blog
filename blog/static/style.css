@@ -1,0 +1,147 @@
+body{
+    margin:0;
+    background-color: skyblue;
+}
+#top_navig_bar {
+    background-color: cornflowerblue;
+    overflow:hidden;
+}
+.sticky{
+    position: fixed;
+    top:0;
+    width:100%;
+}
+#pers_greet{
+    float: right;
+    color:black;
+    padding:10px;
+}
+a{
+    text-decoration: none;
+}
+a.header{
+    display: block;
+    float: left;
+    color:black;
+    padding:10px;
+}
+a.header-right{
+    display: block;
+    float: right;
+    color:black;
+    padding:10px;
+}
+a.header:hover{
+    background-color: black;
+    display: block;
+    float: left;
+    color:white;
+    padding:10px;
+}
+a.header-right:hover{
+    background-color: red;
+    display: block;
+    float: right;
+    color:white;
+    padding:10px;
+}
+.contact{
+    font-size: medium;
+}
+footer{
+    margin-top: 50px;
+}
+.post{
+    border-width: 2px;
+    width: 40%;
+    margin: 8px;
+}
+.image{
+    width: 30%;
+}
+
+#content{
+    padding:15px;
+
+}
+.post_content{
+    text-align: center;
+}
+.post, .title,.comment, .detailed_description{
+    background-color: snow;
+    /* border-radius: 5px; */
+    border-color: rgb(26, 74, 112);
+    border: 3px;
+    border-style: solid;
+}
+.title{
+    margin-top: 1px;
+}
+.post_title{
+    margin-bottom: 3px;
+    margin-top: 0;
+}
+.comment_box{
+    width:100%;
+    height:60px;
+}
+.comment{
+    margin-bottom: 3px;
+
+}
+.author{
+    margin:0;
+    text-align: right;
+}
+.comment_text{
+    margin: 1px;
+}
+.avr_rate{
+    margin-bottom: 0;
+    text-align: right;
+    display: block;
+}
+.rating_box{
+    position: absolute;
+    transform: rotateY(180deg);
+    display: flex;
+}
+.sub_com{
+    float:right;
+}
+input.post_rating {
+    display: none;
+}
+label.post_rating {
+    display: inline-block;
+    cursor: pointer;
+    background-color:  skyblue;
+    width: 20px;
+
+}
+label.post_rating::before{
+    content: '\f005';
+    font-family: fontAwesome;
+    position: relative;
+    display: block;
+    font-size: 20px;
+    color: black;
+}
+label.post_rating::after{
+    content: '\f005';
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    font-size: 20px;
+    color: yellow;
+    top: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+label.post_rating:hover::after, 
+label.post_rating:hover ~ label.post_rating::after,
+input.post_rating:checked ~ label.post_rating::after{
+    opacity: 1;
+}
+
+

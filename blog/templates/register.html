@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<form method='POST' action="">
+    {{form.csrf_token}}
+    <p>{{form.first_name.label}}{{form.first_name(id_='first_name_new')}}</p>
+    <p>{{form.password.label}}{{form.password(id_='password_new')}}</p>
+    <p>{{form.repeat_password.label}}{{form.repeat_password(id_='password_confirm')}}</p>
+    <p>{{form.email.label}}{{form.email(id_='email_new')}}</p>
+    <input type="submit" value="Register">
+</form>
+{% for error in form.first_name.errors%}
+    <span style="color: red;">[{{error}}]</span>
+{% endfor %}
+{% for error in form.password.errors%}
+    <span style="color: red;">[{{error}}]</span>
+{% endfor %}
+{% for error in form.email.errors%}
+    <span style="color: red;">[{{error}}]</span>
+{% endfor %}
+{% endblock content %}

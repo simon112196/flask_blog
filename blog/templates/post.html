@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+    <div class="post_content">
+    
+    <span class="avr_rate">{% if post.rate_cnt > 0 %}
+        Rating: {{post.avr_rate}}
+        {% else %}
+        Rating: No rating yet
+        {% endif %}
+    </span>
+    <h1 class="title">{{ post.title }}</h1>
+    {% if post.image_file %}
+    <img class="image" src="{{url_for('static', filename='img/' + post.image_file) }}">
+    {% endif %}
+    <sub class=>Author: by {{ post.user.first_name }}</sub>
+    <p class="detailed_description">{{ post.content }}</p>
+    </div>
+    
+    {% for comment in comments %}
+    <div class="comment">
+    <p class="comment_text">{{ comment.comment }}</p>
+    <p class="author">Author: by {{ comment.user.first_name }}</p>
+    </div>
+    {% endfor %}
+    <form method="POST" action="">
+        {{form.csrf_token}}
+        {{form.comment.label}}{{ form.comment(class_='comment_box') }}
+        
+        
+        <div class="rating_box"> 
+        {%- for sub in form.rating -%}           
+        
+            {{ sub(class_="post_rating") }}
+            {{ sub.label(class_="post_rating") }}
+        
+        
+        {% endfor %}
+    </div>
+        <input type="submit" value="Enter" class="sub_com" >
+        
+    </form>
+
+  
+{% endblock content %}
