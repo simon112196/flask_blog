@@ -9,11 +9,12 @@
         Rating: No rating yet
         {% endif %}
     </span>
-    <h1 class="title">{{ post.title }}</h1>
+    <h1 class="title">{{ post.title }}</h1>    
+    <sub class="first_name">Author: by {{ post.user.first_name }}</sub>
     {% if post.image_file %}
     <img class="image" src="{{url_for('static', filename='img/' + post.image_file) }}">
     {% endif %}
-    <sub class=>Author: by {{ post.user.first_name }}</sub>
+
     <p class="detailed_description">{{ post.content }}</p>
     </div>
     

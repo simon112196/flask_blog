@@ -11,7 +11,7 @@
     <div class="post">    
         <h1 class=post_title><a href="{{ url_for('post', post_id=post.id)}}">{{ post.title }} &nbsp</a></h1>
         <span>by {{ post.user.first_name }}</span>
-    <p class=short_description>{{ post.short_descris }}</p>
+        <p class=short_description>{{ post.short_descri }}</p>
     </div>
     {% endfor %}
     </div>

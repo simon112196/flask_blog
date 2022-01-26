@@ -18,9 +18,9 @@ class Post(db.Model):
     def __repr__(self):
         return f"Post('{self.date}', '{self.title}', {self.content}')"
     
-    def short_descri(self):
-        disc = self.content[0:200]
-        return disc
+    # def short_descri(self):
+    #     disc = self.content[0:200]
+    #     return disc
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)

@@ -42,6 +42,9 @@ a.header-right:hover{
     color:white;
     padding:10px;
 }
+.short_description{
+    display: block;
+}
 .contact{
     font-size: medium;
 }
@@ -59,7 +62,7 @@ footer{
 
 #content{
     padding:15px;
-
+    margin-top: 20px;
 }
 .post_content{
     text-align: center;
@@ -71,10 +74,15 @@ footer{
     border: 3px;
     border-style: solid;
 }
+.detailed_description{
+    padding: 5px, 15px;
+    text-align: left;
+}
 .title{
-    margin-top: 1px;
+    margin-top: 1px; 
 }
 .post_title{
+    size: 10%;
     margin-bottom: 3px;
     margin-top: 0;
 }
