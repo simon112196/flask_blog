@@ -1,0 +1,1 @@
+Kabrera.S, 2018, life’s too short to remove usb safely, [online]. Available on https://unsplash.com/photos/2xU7rYxsTiM [Accessde 03 November]
