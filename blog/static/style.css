@@ -50,6 +50,9 @@ footer{
 .image{
     width: 30%;
 }
+.post_image{
+    width:20%;
+}
 
 #content{
     padding:15px;
@@ -66,6 +69,7 @@ footer{
     border-style: solid;
 }
 .detailed_description{
+    display: block;
     padding: 5px, 15px;
     text-align: left;
 }
@@ -73,7 +77,7 @@ footer{
     margin-top: 1px; 
 }
 .post_title{
-    size: 10%;
+    font-size: larger;
     margin-bottom: 3px;
     margin-top: 0;
 }
