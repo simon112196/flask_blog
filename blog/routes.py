@@ -5,7 +5,9 @@ from blog.models import User, Post, Comment
 from blog.forms import CommentForm, RegistrationForm, LoginForm, SortForm, PostForm
 from flask_login import login_user, current_user
 from sqlalchemy import desc, asc
-# @app.route("/")
+@app.route("/")
+def toHome():
+    return redirect(url_for("home"))
 
 @app.route("/home", methods=['GET', 'POST'])
 def home():
