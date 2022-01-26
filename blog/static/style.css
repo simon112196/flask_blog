@@ -19,15 +19,12 @@ body{
 #top_navig_bar a{
     text-decoration: none;
     display: block;
-    color:black;
     padding:10px;
 }
 a.header{
     float: left;
 }
-a.header-right{
-    float: right;
-}
+
 a.header:hover{
     background-color: black;
     display: block;
@@ -35,13 +32,7 @@ a.header:hover{
     color:white;
     padding:10px;
 }
-a.header-right:hover{
-    background-color: red;
-    display: block;
-    float: right;
-    color:white;
-    padding:10px;
-}
+
 .short_description{
     display: block;
 }

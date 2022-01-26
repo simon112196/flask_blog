@@ -1,5 +1,6 @@
 
 from email import message
+from email.policy import default
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, PasswordField, EmailField, SelectField, FileField, RadioField, TextAreaField
 from wtforms.validators import DataRequired, Regexp, ValidationError, EqualTo, Email, Length, Optional
@@ -37,5 +38,5 @@ class PostForm(FlaskForm):
 
 
 class SortForm(FlaskForm):
-    order = SelectField('Order', choices=[('date_asc','Date Ascending'), ('date_desc','Date Descending')], validators=[DataRequired()])
+    order = SelectField('Order', choices=[('date_asc','Date Ascending'), ('date_desc','Date Descending')], default='date_desc', validators=[DataRequired()])
     submit = SubmitField('Submit')
