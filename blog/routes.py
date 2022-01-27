@@ -73,7 +73,7 @@ def register():
                 db.session.commit()
                 flash("Registration successful!")
                 login_user(user)
-                return redirect(url_for('registered'))
+                return redirect(url_for('home'))
         else:
             flash("Email already exist, try again with another email.")
 
@@ -82,9 +82,7 @@ def register():
         return redirect(url_for('register'))
     return render_template('register.html', title='Register', form=form)
 
-@app.route("/registered")
-def registered():
-    return render_template('registered.html', title='Thank you for registration')
+
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
@@ -95,7 +93,7 @@ def login():
             login_user(user)
             flash("Welcome back," + " " + current_user.first_name + "!")
             return redirect(url_for('home'))
-        flash("Incorrect email or password suppiled.")
+        return redirect(url_for('error'))
     return render_template('login.html', title='Login', form=form)
     
 
@@ -106,3 +104,6 @@ def logout():
     return redirect(url_for('home'))
 
 
+@app.route("/error")
+def error():
+    return render_template('error.html', title='Login failed')

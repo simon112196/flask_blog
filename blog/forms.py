@@ -8,7 +8,7 @@ from blog.models import User
 
 class RegistrationForm(FlaskForm):
     first_name = StringField('First name',  validators=[DataRequired(message='First name is required.'), Regexp('^[a-zA-Z0-9]{1,20}$') ])
-    password =PasswordField('Password', validators=[DataRequired(message='Password is required.'),  Regexp('^[a-zA-Z0-9]{6,20}$', message='Your password contains invalid character'), EqualTo('repeat_password', message='Password do not match. Please try again')])
+    password =PasswordField('Password', validators=[DataRequired(message='Password is required.'),  Regexp('^[a-zA-Z0-9]{6,20}$', message='Your password contains invalid characters.'), EqualTo('repeat_password', message='Password does not match. Please try again')])
     repeat_password = PasswordField('Confirm password', validators=[DataRequired(message='Please confirm your password.'), Regexp('^[a-zA-Z0-9]{6,20}$', message='Your password contains invalid character')])
     email = EmailField('Email', validators=[DataRequired(message='Email is required.'), Email(message='Invalid email. Please check'),Regexp("(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", message='Your email contains invalid character')])
     submit = SubmitField('Register')
@@ -20,8 +20,8 @@ class RegistrationForm(FlaskForm):
 
 
 class LoginForm(FlaskForm):
-    email = EmailField('Email', validators=[DataRequired(), Regexp('^[a-zA-Z0-9]{1,20}$') ])
-    password = PasswordField('Password', validators=[DataRequired(), Regexp('^[a-zA-Z0-9]{1,20}$') ])
+    email = EmailField('Email', validators=[DataRequired(message='Please confirm your password.'), Regexp("(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", message='Input your email.') ])
+    password = PasswordField('Password', validators=[DataRequired(message='Password is required.'), Regexp('^[a-zA-Z0-9]{1,20}$', message='Your password contains invalid character') ])
     submit = SubmitField('Login')
 
 class CommentForm(FlaskForm):

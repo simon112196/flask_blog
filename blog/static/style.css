@@ -61,7 +61,7 @@ footer{
 .post_content{
     text-align: center;
 }
-.post, .title,.comment, .detailed_description{
+.post, .post_title#in_post,.comment, .detailed_description{
     background-color: snow;
     /* border-radius: 5px; */
     border-color: rgb(26, 74, 112);
@@ -73,10 +73,10 @@ footer{
     padding: 5px 15px;
     text-align: left;
 }
-.title{
+.post_title#in_post{
     margin-top: 1px; 
 }
-.post_title{
+.post_title#home{
     font-size: larger;
     margin-bottom: 3px;
     margin-top: 0;
