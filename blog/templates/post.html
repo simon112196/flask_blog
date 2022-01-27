@@ -9,7 +9,7 @@
         Rating: No rating yet
         {% endif %}
     </span>
-    <h1 class="title">{{ post.title }}</h1>    
+    <h1 class="post_title" id="in_post">{{ post.title }}</h1>    
     <sub class="first_name">Author: by {{ post.user.first_name }}</sub>
     {% if post.image_file %}
     <img class="image" src="{{url_for('static', filename='img/' + post.image_file) }}">
@@ -37,10 +37,17 @@
         
         
         {% endfor %}
-    </div>
+        </div>
         <input type="submit" value="Enter" class="sub_com" >
         
     </form>
+
+    {% for error in form.comment.errors%}
+    <span style="color: red;">[{{error}}]</span>
+    {% endfor %}
+    {% for error in form.rating.errors%}
+        <span style="color: red;">[{{error}}]</span>
+    {% endfor %}
 
   
 {% endblock content %}
