@@ -1,6 +1,6 @@
 Student number: 21110149
 URL: http://c-21110149-cmt-120-cw-2-git-21110149-cmt120-cw2-2.apps.openshift.cs.cf.ac.uk/home
-CHECKSUM: 9b91f927552110970108da7f461c3ead540c69e4
+CHECKSUM: 1c1e5b73c1a5c41d11cb83de88e42323701861bb
 
 Kabrera.S, 2018, life’s too short to remove usb safely, [online]. Available on https://unsplash.com/photos/2xU7rYxsTiM [Accessed 03 November]
 Online Tutorial (2018) Pure CSS Star Rating Widget - How To Create a Simple Star Rating with Html and CSS - No Javascipt. Available at https://www.youtube.com/watch?v=Ep78KjstQuw&t=258s (Acccessed: 22 JAN 2022) 
