@@ -23,6 +23,7 @@ body{
 }
 a.header{
     float: left;
+    color:black
 }
 
 a.header:hover{
